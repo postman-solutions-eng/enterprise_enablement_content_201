@@ -1,5 +1,5 @@
 <h1 style="font-size: 3em;">
-  Postman's Cosmic Course: Part 2
+  Postman's Cosmic Courses: Part 2
 </h1>
 
 ## Description
