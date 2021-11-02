@@ -150,14 +150,31 @@
 					</section>
 					<section>
 						<ul>
-							<li><a href="#"></a>...</li>
+							<li><a href="#purposeOfIntegrations">What can be achieved with Integrations</a></li>
+							<li><a href="#accessingIntegrations">Accessing Integrations</a></li>
 							<li><a href="#knowledgeCheck4">Knowledge Check</a></li>
 						</ul>
 						<p style="font-size: medium;">Click <a href="#learningPathSelection">here</a> to go back and select a different learning path.</p>
-					</section id="">
+					</section>
+					<section id="purposeOfIntegrations">
+						<h4>Why provide Integrations?</h4>
+						<p>In this ~35-minute <a href="https://youtu.be/bsSGJCMs540?t=242">video</a>, Shashank Awasthi, one of our very own product managers, shares that Postman provides a rich set of first-party integrations that allow you to extend use cases beyond Postman.</p>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/bsSGJCMs540" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</section>
 					<section>
-						<h4>...</h4>
-						<p></p>
+						<h4>What can be accomplished with integrations?</h4>
+						<ul>
+							<li>Backup and sync your collections and schemas to your version control.</li>
+							<li>Send monitor run data to application performance monitoring (APM) tools to analyze the performance and reliability of APIs.</li>
+							<li>Send monitor run alerts to incident reporting softwares to keep a check on API availability.</li>
+							<li> Intercept/ proxy data from the web into Postman for further analysis.</li>
+							<li>Author, import, and export your APIs in various API standards such as OpenAPI, WADL, RAML, etc.</li>
+						</ul>
+					</section>
+					<section id="accessingIntegrations">
+						<h4>How to access the integrations in your workspace</h4>
+						<p style="font-size: large;">Our <a href="https://learning.postman.com/docs/integrations/intro-integrations/#accessing-integrations">learning center documentation</a> walks through the details of how to locate integrations in a given workspace. "Integrations" are made easily accessible via your workspace home page.</p>
+						<img src="images/accessIntegrations.png" style="width: 60%; height: 60%">
 					</section>
 					<section id="knowledgeCheck4">
 						<h2>Knowledge Check!</h2>
@@ -190,7 +207,7 @@
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
-
+				autoPlayMedia: true,
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
