@@ -20,7 +20,7 @@
 				<section>
 					<h2>Welcome to Postman's Cosmic Courses: Part 2!</h2>
 					<br></br>
-					<p>You're likely exploring this course if... </p>
+					<p>You're likely exploring this course if you're already familiar with Postman, but would like to get more out of it. </p>
 					<p>Select the <img src="images/rightArrow.png" width="20" height="20"> right arrow on the bottom right of this slide to briefly review navigation tips for this presentation before we jump into content.</p>
 					<!-- Disclaimer -->
 					<em><p style="font-size: 12px;">Please note that this presentation and its content is meant to provide brief overviews on the included topics. If you desire more information or detail, then please reach out to your Postman account team or participate in discussions at <a href="https://community.postman.com/">community.postman.com</a>.</p></em>
@@ -60,7 +60,9 @@
 				<section id="buildApiSlides">
 					<section id="learningPath1">
 						<h3>Building APIs in Postman - a single source of truth</h3>
-						<p style="font-size: 30px;">As an API platform, Postman offers you the ability to <a href="https://learning.postman.com/docs/designing-and-developing-your-api/creating-an-api/#creating-an-api" target="_blank">create</a>, <a href="https://learning.postman.com/docs/designing-and-developing-your-api/versioning-an-api/#versioning-concepts" target="_blank">version</a>, <a href="https://learning.postman.com/docs/designing-and-developing-your-api/defining-an-api/" target="_blank">define</a>, <a href="https://learning.postman.com/docs/designing-and-developing-your-api/developing-an-api/" target="_blank">develop</a>, <a href="https://learning.postman.com/docs/designing-and-developing-your-api/generating-server-code/#generating-server-code" target="_blank">generate server code</a>, <a href="https://learning.postman.com/docs/designing-and-developing-your-api/testing-an-api/" target="_blank">test</a>, <a href="https://learning.postman.com/docs/designing-and-developing-your-api/deploying-an-api/" target="_blank">deploy</a>, <a href="https://learning.postman.com/docs/designing-and-developing-your-api/observing-an-api/" target="_blank">observe</a>, <a href="https://learning.postman.com/docs/designing-and-developing-your-api/managing-apis/" target="_blank">manage/share</a>, <a href="https://learning.postman.com/docs/designing-and-developing-your-api/view-and-analyze-api-reports/" target="_blank">and analyze</a> your APIs all in one place! </p>
+						<p style="font-size: large;">As an API platform, Postman offers you the ability to <a href="https://learning.postman.com/docs/designing-and-developing-your-api/creating-an-api/#creating-an-api" target="_blank">create</a>, <a href="https://learning.postman.com/docs/designing-and-developing-your-api/versioning-an-api/#versioning-concepts" target="_blank">version</a>, <a href="https://learning.postman.com/docs/designing-and-developing-your-api/defining-an-api/" target="_blank">define</a>, <a href="https://learning.postman.com/docs/designing-and-developing-your-api/developing-an-api/" target="_blank">develop</a>, <a href="https://learning.postman.com/docs/designing-and-developing-your-api/generating-server-code/#generating-server-code" target="_blank">generate server code</a>, <a href="https://learning.postman.com/docs/designing-and-developing-your-api/testing-an-api/" target="_blank">test</a>, <a href="https://learning.postman.com/docs/designing-and-developing-your-api/deploying-an-api/" target="_blank">deploy</a>, <a href="https://learning.postman.com/docs/designing-and-developing-your-api/observing-an-api/" target="_blank">observe</a>, <a href="https://learning.postman.com/docs/designing-and-developing-your-api/managing-apis/" target="_blank">manage/share</a>, <a href="https://learning.postman.com/docs/designing-and-developing-your-api/view-and-analyze-api-reports/" target="_blank">and analyze</a> your APIs all in one place! </p>
+
+						<p style="font-size: large;"> Every aspect of API development, from designing a schema to building out test suites and generating live documentation, can be completed start-to-finish without leaving the Postman app. Maintaining an increased level of quality and productivity has never been so easy!</p>
 						
 						<img src="images/source-of-truth-postman-screenshot-v6.svg" style="width: 40%; height: 40%">
 						<p style="font-size: medium;"> Select the <img src="images/downArrow.png" alt="down" style="width: 3%; height: 3%"> arrow on the bottom right of this slide to continue to the topics covered in this learning path.</p>
@@ -68,17 +70,50 @@
 					<section>
 						<ul>
 							<li><a href="#apiFirst">API-First Philosophy</a></li>
-							<li><a href="#apiBuilder">API Builder</a></li>
+							<li><a href="#apiBuilder">Collections and the API Builder</a></li>
+							<!-- Model the following sections after the guide/graphic in the #apiFirst section -->
+							<li><a href="#specPhase">Spec Phase</a></li>
+							<li><a href="#developPhase">Develop Phase</a></li>
+							<li><a href="#testPhase">Test Phase</a></li>
+							<li><a href="#deployPhase">Deploy Phase</a></li>
 							<li><a href="#knowledgeCheck1">Knowledge Check</a></li>
 						</ul>
 						<p style="font-size: medium;">Click <a href="#learningPathSelection">here</a> to go back and select a different learning path.</p>
 					</section>
 					<section id="apiFirst">
-						<p>Being API-First means building out a high-quality API before writing application code. With the help of Postman, your workflow can look like this:</p>
+						<h4>API-First Philosophy</h4>
+						<p>Being API-First means building out a high-quality API before writing application code. With the help of Postman, your workflow can look something like this:</p>
+						<!-- graphic to model sections after -->
 						<img src="images/api-first-development-hero.svg" style="width: 95%; height: 95%">
 					</section>
 					<section id="apiBuilder">
-						<h4>Navigating the API Builder</h4>
+						<h4>How do collections relate to the API Builder?</h4>
+						<p> Workflows can be organized around collections which stand in as a proxy for the API, but the API is the <strong>organizing principle</strong> for the requests, test suites, mocks, examples, monitors, and collections that relate to it. In other words, Postman collections are executable API descriptions.</p>
+						<p>For the aforementioned reasons, it would be reasonable to start with the API Builder in your producer workflow.</p>
+					</section>
+					<section>
+						<p>Let's break that down. Within the API Builder, you can define, document, test, deploy, and monitor an API. You can also generate your collection directly from the API Builder.</p>
+						<img src="images/apiBuilderTab.png" style="width: 25%; height: 25%">
+						<img src="images/apiBuilderNav.png" style="width: 95%; height: 95%">
+					</section>
+					<section>
+						<p>If you'd like to see the API Builder in action, spend about 15 minutes with Arlemi in <a href="https://youtu.be/BUZiRtGRHj0">The Exploratory</a>.</p>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/BUZiRtGRHj0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</section>
+					<section id="specPhase">
+						<h4></h4>
+						<p></p>
+					</section>
+					<section id="developPhase">
+						<h4></h4>
+						<p></p>
+					</section>
+					<section id="testPhase">
+						<h4></h4>
+						<p></p>
+					</section>
+					<section id="deployPhase">
+						<h4></h4>
 						<p></p>
 					</section>
 					<section id="knowledgeCheck1">
@@ -102,8 +137,12 @@
 							<li><a href="#knowledgeCheck2">Knowledge Check</a></li>
 						</ul>
 						<p style="font-size: medium;">Click <a href="#learningPathSelection">here</a> to go back and select a different learning path.</p>
-					</section id="">
-					<section>
+					</section>
+					<section id="">
+						<h4>...</h4>
+						<p></p>
+					</section>
+					<section id="">
 						<h4>...</h4>
 						<p></p>
 					</section>
@@ -128,8 +167,8 @@
 							<li><a href="#knowledgeCheck3">Knowledge Check</a></li>
 						</ul>
 						<p style="font-size: medium;">Click <a href="#learningPathSelection">here</a> to go back and select a different learning path.</p>
-					</section id="">
-					<section>
+					</section>
+					<section id="">
 						<h4>...</h4>
 						<p></p>
 					</section>
