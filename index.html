@@ -72,17 +72,17 @@
 							<li><a href="#apiFirst">API-First Philosophy</a></li>
 							<li><a href="#apiBuilder">Collections and the API Builder</a></li>
 							<!-- Model the following sections after the guide/graphic in the #apiFirst section -->
-							<li><a href="#specPhase">Spec Phase</a></li>
-							<li><a href="#developPhase">Develop Phase</a></li>
+							<li><a href="#specPhase">Spec Phase (writing and importing specifications, generating server code)</a></li>
+							<li><a href="#developPhase">Develop Phase (mock servers, documentation)</a></li>
 							<li><a href="#testPhase">Test Phase</a></li>
-							<li><a href="#deployPhase">Deploy Phase</a></li>
+							<li><a href="#deployPhase">Deploy Phase (CI/CD, monitors, reports)</a></li>
 							<li><a href="#knowledgeCheck1">Knowledge Check</a></li>
 						</ul>
 						<p style="font-size: medium;">Click <a href="#learningPathSelection">here</a> to go back and select a different learning path.</p>
 					</section>
 					<section id="apiFirst">
 						<h4>API-First Philosophy</h4>
-						<p>Being API-First means building out a high-quality API before writing application code. With the help of Postman, your workflow can look something like this:</p>
+						<p>Being API-First means building out a high-quality API before writing application code. Our Fundamentals presentation includes more in-depth information about API-First development and the API lifecycle <a href="https://postman-solutions-eng.github.io/enterprise_enablement_content_101/#/apiFirst">here. </a>With the help of Postman, your workflow can look something like this:</p>
 						<!-- graphic to model sections after -->
 						<img src="images/api-first-development-hero.svg" style="width: 95%; height: 95%">
 					</section>
@@ -107,9 +107,17 @@
 						<p>In this video, Arlemi explains how to create a new API and write/import a new specification.</p>
 						<iframe width="560" height="315" src="https://www.youtube.com/embed/BUZiRtGRHj0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					</section>
+					<section>
+						<h4>Specification Phase Cont'd - Generating Server Code</h4>
+						<p style = "font-size: large;">You can download a running server based on your API specification and use it as a starting point for development of your business logic.</p>
+						<p style = "font-size: large;">In her <a href="https://blog.postman.com/use-your-work-in-postman-to-generate-code-for-your-apps/" target="_blank">blog post</a>,  Joyce shares that "Organizations like BigCommerce and Intuit use Postman code generation for developer onboarding. This allows external developers as well as new team members to get up to speed more quickly."</p>
+						<img src="images/api-codegen.jpeg" style="width: 90%; height: 90%">
+					</section>
 					<section id="developPhase">
 						<h4>Develop Phase - Mock Servers</h4>
-						<p></p>
+						<p style = "font-size: large;">By adding a mock server to your collection and adding examples to your requests, you can simulate the behavior of a real API.</p>
+						<p style = "font-size: large;">Using a mock server is also a best practice for testing APIs in a faster, more efficient way, which we will dive into more deeply in the next <a href="#fasterTestingSlides" target="_blank">learning path.</a></p>
+						<img src="images/mocks-v8.jpeg" style="width: 95%; height: 95%">
 					</section>
 					<section>
 						<h4>Develop Phase - Documentation</h4>
@@ -119,24 +127,43 @@
 						<p style = "font-size: large;">To learn more about documenting your API, check out our learning page <a href="https://learning.postman.com/docs/publishing-your-api/documenting-your-api/" target="_blank">here.</a></p>
 					</section>
 					<section>
-						<h4>Develop Phase - Documentation Cont'd (Publishing)</h4>
-						<p>To publish documentation, it must be part of a collection. You can publish documentation for any collections that you created or have permission to edit.</p>
-						<p>Find more information about publishing documentation <a href="https://learning.postman.com/docs/publishing-your-api/publishing-your-docs/#making-your-documentation-public" target="_blank">here.</a></p>
+						<h4>Develop Phase Cont'd - Documentation (Publishing)</h4>
+						<p style = "font-size: large;">To publish documentation, it must be part of a collection. You can publish documentation for any collections that you created or have permission to edit.</p>
+						<p style = "font-size: large;">Find more information about publishing documentation <a href="https://learning.postman.com/docs/publishing-your-api/publishing-your-docs/#making-your-documentation-public" target="_blank">here.</a></p>
 						<p style="font-size: medium;">Note that publishing documentation for an API is one of many ways to <strong>increase adoption of that API </strong>, which we cover in a separate learning path within this presentation.</p>
 						<img src="images/publishingDocumentation.jpeg">
 					</section>
 					<section id="testPhase">
 						<h4>Test Phase - Writing and verifying tests</h4>
-						<p></p>
+						<p style = "font-size: large;">You can create collections to use as test suites, integration tests, or contract tests for your API. These collections can be linked to a specific version of your API. To find more information about testing an API, please read our <a href="https://learning.postman.com/docs/designing-and-developing-your-api/testing-an-api/" target="_blank"> documention</a> or jog your memory about Postman tests, in general, by reviewing this <a href="https://postman-solutions-eng.github.io/enterprise_enablement_content_101/#/learningPath2" target="_blank"> learning path</a> from our Fundamentals presentation.</p>
+						<p style = "font-size: large;">We'll cover how to test APIs faster and more efficiently in <a href="#fasterTestingSlides" target="_blank">this upcoming learning path.</a></p>
+						<img src="images/addingTestToBuilder.gif" style="width: 95%; height: 95%">
 					</section>
 					<section id="deployPhase">
-						<h4>Deployment Phase</h4>
-						<p></p>
+						<h4>Deployment Phase - CI/CD Pipeline</h4>
+						<p style = "font-size: large;">In the API Builder, under the Test tab of any API version, you'll find an option to integrate with an existing CI/CD Pipeline, as documented <a href="https://learning.postman.com/docs/integrations/available-integrations/ci-integrations/circleci/" target="_blank">here</a>. After you set up the integration, you can view the status of builds or kick off a new build, all from within Postman. With the help of Newman and the Postman API, you also have the option to run API tests created in Postman as part of your CI pipeline.</p>
+						<p style = "font-size: large;">In the API Builder, under the Test tab of any API version, you'll find an option to deploy to an existing API Gateway in AWS, as documented <a href="https://learning.postman.com/docs/integrations/available-integrations/aws-api-gateway/" target="_blank">here</a>.</p>
+						<img src="images/apiBuilderNavTestAndDeploy.png" style="width: 100%; height: 100%">
+					</section>
+					<section>
+						<h4>Deployment Phase Cont'd - Monitors</h4>
+						<p style = "font-size: large;">With Postman, you can monitor your production-ready, or deployed API in several ways. Below, you'll see what a Monitor looks like in the Montiors tab found on the far left of the Postman app.</p>
+						<p style = "font-size: large;">We'll cover how to use Monitors for faster testing in <a href="#fasterTestingSlides" target="_blank">this upcoming learning path.</a></p>
+						<img src="images/Monitor.gif" style="width: 60%; height: 60%">
+					</section>
+					<section>
+						<p>Postman Monitors can also be integrated into slack workspaces as documented <a href="https://learning.postman.com/docs/integrations/available-integrations/slack/"> here</a>. You can find more in-depth information about integrations in an upcoming <a href="#integrationSlides" target="_blank"> learning path</a> within this presentation.</p>
+						<img src="images/SlackMonitor.gif" style="width: 60%; height: 60%">
+					</section>
+					<section>
+						<h4>Deployment Phase Cont'd - Reports</h4>
+						<p style = "font-size: large;">The <a href="https://www.postman.com/pricing/">Postman Enterprise Plan</a> offers a Reports feature to producers and consumers of APIs who are using the platform and want to check on the overall performance of workspaces and teams within an organization. You can find this feature on the top left of your Enterprise home page.</p>
+						<img src="images/Reports.gif" style="width: 90%; height: 90%">
 					</section>
 					<section id="knowledgeCheck1">
 						<h2>Knowledge Check!</h2>
 						<p><strong>What can the API Builder allow users to do?</strong></p>
-						<p>When you feel you can answer the question above, challenge yourself with...</p>
+						<p style = "font-size: large;">When you feel you can answer the question above, challenge yourself with this <a href="https://www.postman.com/postman/workspace/30-days-of-postman-for-developers/collection/1559645-c385b569-e55a-4d4f-b252-51a33311ca78?ctx=documentation">collection </a>from our 30 Days of Postman challenge for developers, which runs through using a specification to build an API.</p>
 						<br>
 						<p style="font-size: medium;">Click <a href="#learningPath1">here</a> to go back to the top of this learning path.</p>
 					</section>
@@ -150,17 +177,35 @@
 					</section>
 					<section>
 						<ul>
-							<li><a href="#"></a>...</li>
+							<!-- request workflows mentioned in first section -->
+							<li><a href="#basicTesting">Postman's API Testing Capabilities</a></li> 
+							<li><a href="#collectionRunner">Collection Runner</a></li>
+							<li><a href="#monitors">Monitors</a></li>
+							<li><a href="#webhooks">Webhooks</a></li>
+							<li><a href="#newman">Newman for Testing</a></li>
 							<li><a href="#knowledgeCheck2">Knowledge Check</a></li>
 						</ul>
 						<p style="font-size: medium;">Click <a href="#learningPathSelection">here</a> to go back and select a different learning path.</p>
 					</section>
-					<section id="">
-						<h4>...</h4>
+					<section id="basicTesting">
+						<h4>Postman's API testing Capabilities</h4>
+						<p style="font-size: large;">As you might have guessed from exploring the other learning paths in this presentation, Postman supports the development of APIs through their entire lifecycle journies. There's no doubting, however, that many new Postman users arrive at the platform wanting to test APIs. Our previous <a href="https://postman-solutions-eng.github.io/enterprise_enablement_content_101/#/learningPath2" target="_blank"> Fundamentals course</a> goes over the very basics of API testing in Postman. To build on those basics, check out how Valentin Despa uses GitHub's API to create repositories and issues through Postman in this <a href="https://youtu.be/dDlsQrZmEmo" target="_blank">12-minute video</a>. As Valentin does this, he shows off advanced testing skills like, using dynamic variables, inspecting error messages, and leveraging test scripts.</p>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/dDlsQrZmEmo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</section>
+					<section id="collectionRunner">
+						<h4>Using the Collection Runner for Testing</h4>
 						<p></p>
 					</section>
-					<section id="">
-						<h4>...</h4>
+					<section id="monitors">
+						<h4>Monitors for Testing</h4>
+						<p></p>
+					</section>
+					<section id="webhooks">
+						<h4>Webhooks for Testing</h4>
+						<p></p>
+					</section>
+					<section id="newman">
+						<h4>Newman for Testing</h4>
 						<p></p>
 					</section>
 					<section id="knowledgeCheck2">
