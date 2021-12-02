@@ -35,6 +35,10 @@
 					<p style="font-size: 30px;">Keyboard arrow keys work just as well. The <code>Esc</code> key can be used to access a visual map of all the content available in this presentation.</p>
 				</section>
 				<section>
+					<h3>Course Roadmap</h3>
+					<img src="images/Part2TopicsChart.png" style="width: 100%; height: 100%">
+				</section>
+				<section>
 					<p>Now, let's explore some stories that might drive your needs from this course.</p>
 				</section>
 				<section id="learningPathSelection">
@@ -69,8 +73,8 @@
 					</section>
 					<section>
 						<ul>
-							<li><a href="#apiFirst">API-First Philosophy</a></li>
-							<li><a href="#apiBuilder">Collections and the API Builder</a></li>
+							<li><a href="#apiFirst">API Workflow and the API-First Philosophy</a></li>
+							<li><a href="#apiBuilder">The API Builder</a></li>
 							<!-- Model the following sections after the guide/graphic in the #apiFirst section -->
 							<li><a href="#specPhase">Spec Phase (writing and importing specifications, generating server code)</a></li>
 							<li><a href="#developPhase">Develop Phase (mock servers, documentation)</a></li>
@@ -81,25 +85,30 @@
 						<p style="font-size: medium;">Click <a href="#learningPathSelection">here</a> to go back and select a different learning path.</p>
 					</section>
 					<section id="apiFirst">
+						<h4>API Workflow</h4>
+						<p style="font-size: large;">As an API platform, Postman can be used to develop an API throughout its entire lifecycle. Pictured below is a typical API development workflow. Workflows can be organized around collections which stand in as a proxy for the API, but the API is the <strong>organizing principle</strong> for the requests, test suites, mocks, examples, monitors, and collections that relate to it. In other words, Postman collections are executable API descriptions.</p>
+						<img src="images/apiDevelopmentFlow.png" style="width: 40%; height: 40%">
+						<img src="images/collection.gif" style="width: 40%; height: 40%">
+					</section>
+					<section>
 						<h4>API-First Philosophy</h4>
-						<p>Being API-First means building out a high-quality API before writing application code. Our Fundamentals presentation includes more in-depth information about API-First development and the API lifecycle <a href="https://postman-solutions-eng.github.io/enterprise_enablement_content_101/#/apiFirst">here. </a>With the help of Postman, your workflow can look something like this:</p>
+						<p>Being API-First means building out a high-quality API before writing application code. Our Fundamentals presentation includes more in-depth information about API-First development and the API lifecycle <a href="https://postman-solutions-eng.github.io/enterprise_enablement_content_101/#/apiFirst">here. </a>With the help of Postman, your workflow can be further segmented in the following way:</p>
 						<!-- graphic to model sections after -->
 						<img src="images/api-first-development-hero.svg" style="width: 95%; height: 95%">
 					</section>
 					<section id="apiBuilder">
-						<h4>How do collections relate to the API Builder?</h4>
-						<p style = "font-size: large;"> Workflows can be organized around collections which stand in as a proxy for the API, but the API is the <strong>organizing principle</strong> for the requests, test suites, mocks, examples, monitors, and collections that relate to it. In other words, Postman collections are executable API descriptions.</p>
-						<p style = "font-size: large;">For the aforementioned reasons, it would be reasonable to start with the API Builder in your producer workflow.</p>
+						<h4>The API Builder</h4>
+						<p style = "font-size: large;">Because the API serves as the organizing principle for all other parts of development in an API-first workflow, it would be reasonable to start with the API Builder.</p>
 						<img src="images/apiBuilder.gif" style="width: 95%; height: 95%">
 					</section>
 					<section>
-						<p>Let's break that down. Within the API Builder, you can define, document, test, deploy, and monitor an API. You can also generate your collection directly from the API Builder.</p>
+						<p>Within the API Builder, you can define, document, test, deploy, and monitor an API. You can also generate your collection directly from the API Builder.</p>
 						<img src="images/apiBuilderTab.png" style="width: 25%; height: 25%">
 						<img src="images/apiBuilderNav.png" style="width: 95%; height: 95%">
 					</section>
 					<section>
 						<p>It's also possible to develop an API specification modeled after a collection. In other words, it's possible to work in reverse to generate an API within Postman.</p>
-						<p>Note that this isn't a formal process or feature in Postman yet, but <a href="https://www.postman.com/postman/workspace/postman-public-workspace/documentation/5922408-f21e770c-7d3b-4092-bdd6-288bb1d8d825" target="_blank">this collection</a>, shared by Matt Ball, can help you walk through this reversed scenario. This process originated from Kevin Swiber's tool, which you can use in your browser <a href="https://kevinswiber.github.io/postman2openapi/" target="_blank">here.</a></p>
+						<p>Note that this isn't a formal process or feature in Postman yet, but <a href="https://www.postman.com/postman/workspace/postman-public-workspace/documentation/5922408-f21e770c-7d3b-4092-bdd6-288bb1d8d825" target="_blank">this collection</a>, shared by Matt Ball, can help you walk through this reversed scenario of producing an API spec from an existing collection. This process originated from Kevin Swiber's tool, which you can use in your browser <a href="https://kevinswiber.github.io/postman2openapi/" target="_blank">here.</a></p>
 					</section>
 					<section id="specPhase">
 						<h4>Specification Phase</h4>
@@ -130,7 +139,7 @@
 						<h4>Develop Phase Cont'd - Documentation (Publishing)</h4>
 						<p style = "font-size: large;">To publish documentation, it must be part of a collection. You can publish documentation for any collections that you created or have permission to edit.</p>
 						<p style = "font-size: large;">Find more information about publishing documentation <a href="https://learning.postman.com/docs/publishing-your-api/publishing-your-docs/#making-your-documentation-public" target="_blank">here.</a></p>
-						<p style="font-size: medium;">Note that publishing documentation for an API is one of many ways to <strong>increase adoption of that API </strong>, which we cover in a separate learning path within this presentation.</p>
+						<p style="font-size: medium;">Note that publishing documentation for an API is one of many ways to <strong>increase adoption of that API </strong>, which we cover in a separate <a href="#increaseAdoptionSlides" target="_blank">learning path</a> within this presentation.</p>
 						<img src="images/publishingDocumentation.jpeg">
 					</section>
 					<section id="testPhase">
@@ -163,7 +172,7 @@
 					<section id="knowledgeCheck1">
 						<h2>Knowledge Check!</h2>
 						<p><strong>What can the API Builder allow users to do?</strong></p>
-						<p style = "font-size: large;">When you feel you can answer the question above, challenge yourself with this <a href="https://www.postman.com/postman/workspace/30-days-of-postman-for-developers/collection/1559645-c385b569-e55a-4d4f-b252-51a33311ca78?ctx=documentation">collection </a>from our 30 Days of Postman challenge for developers, which runs through using a specification to build an API.</p>
+						<p style = "font-size: large;">When you feel you can answer the question above, challenge yourself with this <a href="https://www.postman.com/postman/workspace/30-days-of-postman-for-developers/collection/1559645-c385b569-e55a-4d4f-b252-51a33311ca78?ctx=documentation">collection </a>from our 30 Days of Postman challenge for developers, which empowers users to build an API using a specification.</p>
 						<br>
 						<p style="font-size: medium;">Click <a href="#learningPath1">here</a> to go back to the top of this learning path.</p>
 					</section>
@@ -199,46 +208,76 @@
 					</section>
 					<section id="monitors">
 						<h4>Monitors for Testing</h4>
-						<p style="font-size: large;">Postman Monitors can be <a href="https://learning.postman.com/docs/monitoring-your-api/intro-monitors/#collection-based-monitors" target="_blank">collection-based</a>. They can also be set up to monitor <a href="https://learning.postman.com/docs/monitoring-your-api/monitoring-apis-websites/" target="_blank">entire APIs (multiple collections)</a>. Monitors give you continuous visibility into the health and performance of your APIs. Once the monitor is running you’ll get alerted to any failures, so you can quickly identify and address issues before your API’s consumers are affected. Spend 5 minutes with Joyce to see how she sets up a monitor in the Postman cloud <a href="https://youtu.be/tDQzY1Hn2LY?t=39" target="_blank">here.</a></p>
+						<p style="font-size: large;">Postman Monitors can be <a href="https://learning.postman.com/docs/monitoring-your-api/intro-monitors/#collection-based-monitors" target="_blank">collection-based</a>. They can also be set up to monitor <a href="https://learning.postman.com/docs/monitoring-your-api/monitoring-apis-websites/" target="_blank">entire APIs (multiple collections)</a>. Monitors give you continuous visibility into the health and performance of your APIs. Once the monitor is running you’ll get alerted to any failures, so you can quickly identify and address issues before your API’s consumers are affected. Spend 5 minutes with Joyce to see how she sets up a monitor in the Postman cloud <a href="https://youtu.be/tDQzY1Hn2LY?t=39" target="_blank">here.</a> In her video, Joyce also shares the benefits of having an automated monitor set up with notifications.</p>
 						<iframe width="560" height="315" src="https://www.youtube.com/embed/tDQzY1Hn2LY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<p style="font-size: large;"">You can practice creating monitors with this <a href="https://www.postman.com/postman/workspace/postman-api-monitoring-examples/overview" target="_blank">collection</a>, which walks through several example monitoring scenarios.</p>
 					</section>
 					<section id="webhooks">
 						<h4>Webhooks for Testing</h4>
-						<p></p>
+						<p>The <a href="https://www.postman.com/postman/workspace/postman-public-workspace/folder/12959542-8bec7537-cc5d-4ed7-a995-c7753e55ed28?ctx=documentation" target="_blank">Postman API</a> can be used to set up a webhook. With webhooks, you can trigger a collection at a specific time (similar to monitors) with your own custom payload, which can then be accessed in a collection. You can find more information about webhooks and how to set them up in our <a href="https://learning.postman.com/docs/running-collections/collection-webhooks/" target="_blank">docs.</a></p>
 					</section>
 					<section id="newman">
 						<h4>Newman for Testing</h4>
-						<p></p>
+						<p style="font-size: large;"> In this ~35-minute <a href="https://youtu.be/sB2HHrezQOo?t=2962" target="_blank">video clip</a>, Trent and Joyce talk through how to use Newman and a CI/CD tool with Postman for testing. They show off how you can format a Newman shell command with flags to run in a similar way as the Collection Runner. The console outputs information that would indicate the health of your API.</p>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/sB2HHrezQOo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					</section>
 					<section id="knowledgeCheck2">
 						<h2>Knowledge Check!</h2>
-						<p><strong>...</strong></p>
-						<p>When you feel you can answer the question above, ...</p>
+						<p><strong>Which Postman testing process(es) would allow you to run tests on a schedule?</strong></p>
+						<p style="font-size: large;">When you feel you can answer the question above, practice the skills we covered in this learning path using the following challenges from our 30 Days of Postman challenge for developers:</p>
 						<br>
+						<ul style="font-size: large;">
+							<li><a href="https://www.postman.com/postman/workspace/30-days-of-Postman---for-develo~f1c6b0a9-b930-4165-9aa4-f655dd7051b5/collection/1559645-a509b7b4-4b46-4593-9dec-2bafbe7d9524" target="_blank">Newman</a></li>
+							<li><a href="https://www.postman.com/postman/workspace/30-days-of-Postman---for-develo~f1c6b0a9-b930-4165-9aa4-f655dd7051b5/collection/1559645-7e3a6d75-57cb-4e54-82ff-b4f9e402c8cc" target="_blank">Monitoring</a></li>
+							<li><a href="https://www.postman.com/postman/workspace/30-days-of-Postman---for-develo~f1c6b0a9-b930-4165-9aa4-f655dd7051b5/collection/1559645-900c913f-3ce2-4445-9508-4f994faeff10" target="_blank">Mocks</a></li>
+							<li><a href="https://www.postman.com/postman/workspace/30-days-of-Postman---for-develo~f1c6b0a9-b930-4165-9aa4-f655dd7051b5/collection/1559645-1da88e07-1c0a-401c-996b-a3f2c9c3f486" target="_blank">Collection Runner</a></li>
+						</ul>
 						<p style="font-size: medium;">Click <a href="#learningPath2">here</a> to go back to the top of this learning path.</p>
 					</section>
 				</section>
 				<section id="increaseAdoptionSlides">
 					<section id="learningPath3">
 						<h3>Increasing API adoption through Postman</h3>
-						<p style="font-size: medium;">There are several benefits to increasing adoption of your API and one of the most powerful ways to do that is by creating a public workspace. Increasing adoption of your API can enable broader collaboration and help gather product feedback, as Joyce discusses in this <a href="People create public workspaces to increase adoption of an API">blog post</a> (4-minute read).</p>
+						<p style="font-size: medium;">There are several benefits to increasing adoption of your API and one of the most powerful ways to do that is by creating a public workspace. Increasing adoption of your API can enable broader collaboration and help gather product feedback, as Joyce discusses in this <a href="https://blog.postman.com/increasing-adoption-of-an-api-with-a-public-workspace/" target="_blank">blog post</a> (4-minute read).</p>
 						<img src="images/increaseAdoption.png" style="width: 44%; height: 44%">
 						<p style="font-size: medium;"> Select the <img src="images/downArrow.png" alt="down" style="width: 3%; height: 3%"> arrow on the bottom right of this slide to continue to the topics covered in this learning path.</p>
 					</section>
 					<section>
 						<ul>
-							<li><a href="#"></a>...</li>
+							<li><a href="#goPublic">Go Public!</a></li>
+							<li><a href="#maintainDocumentation">Ensure documentation is easy to follow</a></li>
+							<li><a href="#metrics">Metrics that indicate wide adoption</a></li>
 							<li><a href="#knowledgeCheck3">Knowledge Check</a></li>
 						</ul>
 						<p style="font-size: medium;">Click <a href="#learningPathSelection">here</a> to go back and select a different learning path.</p>
 					</section>
-					<section id="">
-						<h4>...</h4>
-						<p></p>
+					<section id="goPublic">
+						<h4>Go Public!</h4>
+						<p style="font-size: large;">One of the simplest ways to increase adoption of your API is to toggle the workspace in which that API exists in Postman from Team to Public - or - <a href="https://learning.postman.com/docs/collaborating-in-postman/public-workspaces/#creating-a-public-workspace" target="_blank">start with a public workspace</a> for your API from the beginning.</p>
+						<p style="font-size: large;">In his <a href="https://blog.postman.com/introducing-postman-public-workspaces/" target="_blank"> blog post announcing public workspaces, </a>Abhinav, Postman's CEO, compares the experience of using a public workspace to online gaming when he says, "In massively multiplayer games, a large community of gamers unites to play or join a quest. When the ability to play at a massively multiplayer level first appeared, it changed gaming forever. Similarly, Postman’s public workspaces will let a massive community of users engage with APIs or collections organized by API producers, with the ultimate quest of improving every API and the experience of that API’s consumers." If you'd like to read more about how public workspaces enable collaboration, you can read more from Abhinav <a href="https://blog.postman.com/public-workspaces-why-we-created-them-what-you-can-do/" target="_blank">here</a>. For 5 easy steps to set up your first public workspace, you can also check out Joyce's <a href="https://blog.postman.com/how-to-set-up-public-workspaces/" target="_blank">blog post</a>.</p>
+						<img src="images/publicWS.gif" style="width: 80%; height: 80%">
+					</section>
+					<section id="maintainDocumentation">
+						<h4>Ensure documentation is easy to follow</h4>
+						<p style="font-size: large;">While making an API public allows it to be more accessible, refining documentation makes an API more usable. Check out this <a href="https://blog.postman.com/postman-good-documentation-checklist/" target="_blank">blog post</a> from Joyce in which she reviews "shared similarities across good documentation". Be sure to also review the interactive version of the <a href="https://documenter.getpostman.com/view/1559645/TVYGbHs1" target="_blank">checklist</a> she mentions in her blog post!</p>
+						<img src="images/documentationChecklist.png" style="width: 50%; height: 50%">
+					</section>
+					<section id="metrics">
+						<h4>Metrics that indicate wide adoption</h4>
+						<p style="font-size: large;">The following list of measures used to assess the health of a workspace are not all-encompassing, but generally thought to be a strong indicator of the overall success of your API/workspace's adoption:</p>
+						<ul style="font-size: large;">
+							<li>Count of active forks of a collection or environment</li>
+							<li>Count of people watching your API or collection for updates</li>
+							<li>Recent workspace activity to demonstrate resources are actively updated</li>
+							<li>History of mock server call logs</li>
+							<li>Percent of API calls hitting your server that includes a Postman (or custom) User-Agent header
+							</li>
+						</ul>
+						<p style="font-size: large;">For further reading about these metrics, please review Joyce's <a href="https://blog.postman.com/increasing-adoption-of-an-api-with-a-public-workspace/" target="_blank">blog post</a>.</p>
 					</section>
 					<section id="knowledgeCheck3">
 						<h2>Knowledge Check!</h2>
-						<p><strong>...</strong></p>
+						<p><strong>Why is it important to refine your API's documentation if your objective is to increase adoption of your API?</strong></p>
 						<p>When you feel you can answer the question above, ...</p>
 						<br>
 						<p style="font-size: medium;">Click <a href="#learningPath3">here</a> to go back to the top of this learning path.</p>
@@ -253,7 +292,7 @@
 					</section>
 					<section>
 						<ul>
-							<li><a href="#purposeOfIntegrations">What can be achieved with Integrations</a></li>
+							<li><a href="#purposeOfIntegrations">Why we provide integrations and what you can accomplish with them</a></li>
 							<li><a href="#accessingIntegrations">Accessing Integrations</a></li>
 							<li><a href="#customeWebhooksIntegrations">Custom Webhooks</a></li>
 							<li><a href="#ciIntegrations">CI Integrations</a></li>
@@ -264,7 +303,8 @@
 					</section>
 					<section id="purposeOfIntegrations">
 						<h4>Why provide Integrations?</h4>
-						<p>In this ~35-minute <a href="https://youtu.be/bsSGJCMs540?t=242">video</a>, Shashank Awasthi, one of our very own product managers, shares that Postman provides a rich set of first-party integrations that allow you to extend use cases beyond Postman.</p>
+						<p style="font-size: large;">Check out this <a href="https://blog.postman.com/the-new-postman-api-platform/" target="_blank">blog post</a>, written by Abhijit, which dives into some of the latest and greatest integrations Postman offers and why they support the Postman vision to streamline API workflows.</p>
+						<p style="font-size: large;">In this ~35-minute <a href="https://youtu.be/bsSGJCMs540?t=242">video</a>, Shashank Awasthi, one of our very own product managers, shares that Postman provides a rich set of first-party integrations that allow you to extend use cases beyond Postman.</p>
 						<iframe width="560" height="315" src="https://www.youtube.com/embed/bsSGJCMs540" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					</section>
 					<section>
@@ -293,17 +333,24 @@
 					</section>
 					<section id="customeWebhooksIntegrations">
 						<h4>Custom Webhooks</h4>
+						<p style="font-size: large;">You may have seen webhooks mentioned in a <a href="#webhooks" target="_blank">previous learning path</a> within this presentation, but some of the integrations available in Postman that use webhooks allow capabilities to back up collections, send team and collection activity feeds, and send monitor run results. <a href="https://learning.postman.com/docs/integrations/available-integrations/slack/" target="_blank">Slack</a> offers one such integration. Through the Slack integration, you can send monitor run results and team activity feeds to a slack channel.</p>
+						<p style="font-size: large;">You can find more information regarding custom webhooks in our documenation <a href="https://learning.postman.com/docs/integrations/webhooks/#send-a-team-activity-feed-to-custom-webhooks" target="_blank">here.</a> </p>
+						<img src="images/SlackMonitor.gif" style="width: 70%; height: 70%">
 					</section>
 					<section id="ciIntegrations">
 						<h4>Continuous Integration</h4>
+						<p style="font-size: large;">Continuous Integration (CI) is a development practice that requires developers to regularly merge code updates into a shared repository. It involves the process of automating the build and testing of code every time a developer commits code updates, as documented <a href="https://learning.postman.com/docs/running-collections/using-newman-cli/continuous-integration/" target="_blank">here</a>. Jenkins is an example of a CI tool, which many developers use and you may have seen in a <a href="#newman" target="_blank">previous learning path</a> within this presentation.</p>
+						<p style="font-size: large;">In her <a href="https://blog.postman.com/integrate-api-tests-with-postman-newman-and-travis-ci/" target="_blank">blog post</a>, Joyce walks through every step you can take to practice using a Travis CI integration in a Postman sandbox environment.</p>
+						<img src="images/travisCI.png" style="width: 90%; height: 90%">
 					</section>
 					<section id="otherAvailableIntegrations">
 						<h4>What other integrations are available to explore?</h4>
+						<p>We've only just scratched the surface here with integrations available to Postman users! If you'd like to see a full list of the integrations available, check out our documentation <a href="https://learning.postman.com/docs/integrations/available-integrations/apimatic/" target="_blank">here</a> (see the left side navigation bar for the list). </p>
 					</section>
 					<section id="knowledgeCheck4">
 						<h2>Knowledge Check!</h2>
-						<p><strong>...</strong></p>
-						<p>When you feel you can answer the question above, ...</p>
+						<p><strong>Which Postman integration would you use for Amazon S3 backups?</strong></p>
+						<p>When you feel you can answer the question above, practice using custom webhooks with <a href="https://www.postman.com/postman/workspace/30-days-of-postman-for-developers/collection/1559645-7d96fb0a-52d9-4c7e-b044-6f5c3f6ee12f?ctx=documentation" target="_blank">this challenge</a> from our 30 Days of Postman Challenge for Developers.</p>
 						<br>
 						<p style="font-size: medium;">Click <a href="#learningPath4">here</a> to go back to the top of this learning path.</p>
 					</section>
@@ -317,6 +364,7 @@
 						<li>Increasing API adoption through Postman</li>
 						<li>Integrations with Postman</li>
 					</ul>
+					<p style="font-size: large;">We hope this presentation helped answer some questions. If not, we'd like to know how we can improve this resource. Please take a moment to submit feedback <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-VWMTx3fJCKy7xa-PhqbnK86EdPkLnsc5KGqx7bC7uc-jhQ/viewform" target="_blank">here</a>.</p>
 				</section>
 			</div>
 		</div>
